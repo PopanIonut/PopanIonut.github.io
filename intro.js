@@ -22,10 +22,6 @@ function showPage(page) {
     document.getElementById(page).style.display = 'block';
 }
 
-
-
-
-
 var wellcome = getWelcomeMsg();
 console.info(wellcome)
 
@@ -34,3 +30,33 @@ console.info("summaryElement", summaryElement);
 var color = getColor();
 summaryElement.style.color = color;
 
+//11.03.2019
+function initMenu() {
+    var links = document.querySelectorAll("#top-menu-bar a");
+    console.info(links);
+    for (var i = 0; i < links.length; i++) {
+        links[i].onclick = clikcOnMenuItem;
+    }
+}
+
+function clikcOnMenuItem() {
+console.warn('clicked on menu',this);
+hideAllPages();
+var pageId = this.getAttribute('data-page');
+console.warn({pageId});
+showPage(pageId);
+
+//this - o sa ne zica pagina pe care am dat click, este elementu din link
+}
+
+function hideAllPages(){
+    var pages = document.querySelectorAll('.page')
+    for (var i = 0; i < pages.length; i++){
+        pages[i].style.display='none';
+    }
+}
+
+// var i = i este initializare
+// i++ adica i din 0 se face 1
+//apelam functia
+initMenu();
