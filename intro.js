@@ -1,19 +1,3 @@
-console.info("My first js file")
-
-var name = "Ionut";
-var employed = true;
-
-console.warn("employed");
-console.warn(employed);
-
-console.info("Name:");
-console.info(name);
-
-name = "Ionut";
-
-console.info("Name:");
-console.info(name);
-
 
 function getWelcomeMsg() {
 return "Wellcome to my site!";
@@ -28,41 +12,10 @@ function getColor(){
 
 }
 //Exemplu ok!
-function hideHomePage() {
-    document.getElementById('home-page').style.display = 'none';
-}
-
-function showSkillsPage() {
-    document.getElementById('skills-page').style.display = 'block';
-}
-
-function clickOnSkills() {
-    hidePage('home-page');
-    hidePage('languages-page');
-    hidePage('about-page');
-    showPage('skills-page');
-}
-function clickOnHome() {
-    hidePage('skills-page');
-    hidePage('languages-page');
-    hidePage('about-page');
-    showPage('home-page');
-}
-function clickOnLanguages() {
-    hidePage('skills-page');
-    hidePage('home-page');
-    hidePage('about-page');
-    showPage('languages-page');
-}
-function clickOnAbout() {
-    hidePage('skills-page');
-    hidePage('home-page');
-    hidePage('languages-page');
-    showPage('about-page');
-}
 
 function hidePage(page) {
-    document.getElementById(page).style.display = 'none';
+   var el = document.getElementById(page).style.display = 'none';
+    el.style.display = 'none';
 }
 
 function showPage(page) {
