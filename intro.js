@@ -65,12 +65,12 @@ initMenu();
 function showSkills(){
     var skills = ['html','css','js'];
     console.warn('showSkills',skills);
-    skills.forEach(printSkill);
-
-    function printSkill(skill, index) {
+    skills.forEach(function(skill, index) {
         console.info( '#' + (index + 1) + " " + skill);
     }
-}
+});
+
+    
 
 showSkills(); 
 
