@@ -60,3 +60,4 @@ function hideAllPages(){
 // i++ adica i din 0 se face 1
 //apelam functia
 initMenu();
+
