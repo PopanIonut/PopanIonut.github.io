@@ -94,4 +94,5 @@ return response.json();
 showSkills(skills);
 })
 
+
 console.log('4 after load');
