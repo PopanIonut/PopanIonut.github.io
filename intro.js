@@ -75,13 +75,7 @@ function showSkills() {
     
 
     var htmlSkills = skills.map(function (skill) {
-        var endorsedBy = skill.endorsedBy;
-        if (endorsedBy){
-            endorsedBy = '-' + endorsedBy;
-        } else {
-            endorsedBy = '';
-        }
-        
+        var endorsedBy = skill.endorsedBy ? '-' + skill.endorsedBy : '';      
         var endorsements = ` <span class="endorsements">(${skill.endorsements}${endorsedBy})</span>`;
         return '<li>' + skill.name.toUpperCase() + endorsements +'</li>';
     });
