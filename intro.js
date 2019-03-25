@@ -62,17 +62,21 @@ function hideAllPages(){
 initMenu();
 
 
-function showSkills() {
-    var skills = ['html', 'css', 'js', 'funny'];
+function showSkills() { 
+    var allEndorsements = [8, 12, 19, 25, 1]
+    var skills = ['html', 'css', 'js', 'nodejs' , 'php'];
 
     var htmlSkills = skills.map(function (skill, index) {
-        return '<li>' + skill.toUpperCase() + '</li>';
-
+        var endorsements = ' <span class="endorsements">(' + allEndorsements[index] + ')</span>';
+        return '<li>' + skill.toUpperCase() + endorsements +'</li>';
     });
 
     var ul = document.querySelector('#skills-page ul');
     ul.innerHTML = htmlSkills.join('');
 }
+
+hideAllPages();
+showPage('skills-page');
 
 showSkills(); 
 
