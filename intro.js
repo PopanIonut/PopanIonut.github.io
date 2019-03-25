@@ -66,16 +66,23 @@ function showSkills() {
     // var allEndorsements = [8, 12, 19, 25, 1]
     // var skills = ['html', 'css', 'js', 'nodejs' , 'php'];
     var skills = [
-        {name: 'html', endorsements: 8},
-        {name: 'css', endorsements: 12},
+        {name: 'html', endorsements: 8, endorsedBy: 'Andrei'},
+        {name: 'css', endorsements: 12, endorsedBy:'Vasile'},
         {name: 'js', endorsements: 19},
         {name: 'nodejs', endorsements: 25},
         {name: 'php', endorsements: 1}
     ];
     
 
-    var htmlSkills = skills.map(function (skill, index) {
-        var endorsements = ' <span class="endorsements">(' + skill.endorsements + ')</span>';
+    var htmlSkills = skills.map(function (skill) {
+        var endorsedBy = skill.endorsedBy;
+        if (endorsedBy){
+            endorsedBy = '-' + endorsedBy;
+        } else {
+            endorsedBy = '';
+        }
+        
+        var endorsements = ` <span class="endorsements">(${skill.endorsements}${endorsedBy})</span>`;
         return '<li>' + skill.name.toUpperCase() + endorsements +'</li>';
     });
 
