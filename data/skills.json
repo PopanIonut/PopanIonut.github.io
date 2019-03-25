@@ -1,0 +1,6 @@
+    {"name": "html", "endorsements": 8, "endorsedBy": "Andrei"},
+    {"name": "css", "endorsements": 12, "endorsedBy":"Vasile"},
+    {"name": "js", "endorsements": 19},
+    {"name": "nodejs", "endorsements": 25},
+    {"name": "php", "endorsements": 1}
+    {"name": "vscode", "endorsements": 0}
